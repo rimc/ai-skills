@@ -17,6 +17,10 @@ allowed-tools:
 
 # Time Tracking Skill
 
+## Configuration
+<!-- Set your name below. This will be included as the User column in every time tracking entry. -->
+**User Name:** `Your Name Here`
+
 Automatically detect task completion, produce a time tracking summary with estimated hours saved, and persist entries to a monthly markdown log.
 
 ## Core Principle
@@ -110,12 +114,12 @@ Monthly files at `~/.codeium/windsurf/timetracking/YYYY-MM-timetracking.csv`.
 File format (standard CSV — quote any values containing commas):
 
 ```csv
-Task #,Task Description,Expected Hours w/o Windsurf,Estimated Hours w/ Windsurf,Hours Saved,Date
-1,"project-name: Built auth flow with JWT refresh tokens",6.0,1.5,4.5,03/29/2026
-2,"project-name: Fixed CSS grid layout bug on dashboard",1.5,0.3,1.2,03/31/2026
+S #,Task Description,Expected hours without using Windsurf (A),Actual hours using Windsurf (B),Hours saved by Windsurf – (A)-(B),Entered By,Entered On Date
+1,"project-name: Built auth flow with JWT refresh tokens",6.0,1.5,4.5,Alex Smith,03/29/2026
+2,"project-name: Fixed CSS grid layout bug on dashboard",1.5,0.3,1.2,Alex Smith,03/31/2026
 ```
 
-Always wrap the Task Description field in double quotes since it commonly contains commas. If a description contains double quotes, escape them by doubling (`"""`).
+Always wrap the Task Description field in double quotes since it commonly contains commas. If a description contains double quotes, escape them by doubling (`"""`). Read the **User Name** from the Configuration section above and populate the User column on every entry.
 
 ### Writing Entries
 
@@ -164,7 +168,7 @@ If the user continues working on the same task after a summary was logged:
 
 - Silently continue tracking timestamps and breaks
 - When the continuation concludes, produce an **updated** summary
-- Overwrite the existing row in the markdown file (same Task #)
+- Overwrite the existing row in the csv file (same Task #)
 - Tell the user it's an update, not a new entry
 
 ### New task after summary
