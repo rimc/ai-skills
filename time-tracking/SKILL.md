@@ -23,16 +23,12 @@ allowed-tools:
 
 Automatically detect task completion, produce a time tracking summary with estimated hours saved, and persist entries to a monthly markdown log.
 
-## Core Principle
-
-Balance automatic detection with user control. Cascade proposes all values — the user confirms or adjusts before anything is written to disk.
-
 ## When to Activate
 
 Activate when any of these conditions are met:
 
-1. **Task completion signals** — The user says something like "that worked", "perfect", "all set", "we're done", "looks good", or otherwise signals a task is finished.
-2. **Explicit request** — The user says "log my time", "track this task", "track time", or "/track-time".
+1. **Task completion signals** — The user says something like "thanks", "that worked", "perfect", "all set", "we're done", "looks good", or otherwise signals a task is finished.
+2. **Explicit request** — The user says "log my time", "log this", "track this task", "track this", "track time", or "/track-time".
 3. **Topic shift** — The user's message is clearly about a different project, feature, or problem domain than what was just worked on.
 4. **Break signals** — The user says "brb", "stepping away", "taking a break", etc. (note the timestamp; don't generate a summary yet — wait for the task to actually conclude).
 
