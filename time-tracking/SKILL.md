@@ -119,16 +119,17 @@ S #,Task Description,Expected hours without using Windsurf (A),Actual hours usin
 2,"project-name: Fixed CSS grid layout bug on dashboard",1.5,0.3,1.2,Alex Smith,03/31/2026
 ```
 
-Always wrap the Task Description field in double quotes since it commonly contains commas. If a description contains double quotes, escape them by doubling (`"""`). Read the **User Name** from the Configuration section above and populate the User column on every entry.
+Always wrap the Task Description field in double quotes since it commonly contains commas. If a description contains double quotes, escape them by doubling (`"""`). Read the **User Name** from the Configuration section above and populate the **Entered By** column on every entry.
 
 ### Writing Entries
 
 Follow this sequence:
 
+0. **Check User Name config** — Read the **User Name** value from the Configuration section at the top of this file. If it is still `Your Name Here`, ask the user: "What name should I use for the **Entered By** column in your time tracking entries?" Then update the `**User Name:**` line in this file with their response before proceeding.
 1. Check if `~/.codeium/windsurf/timetracking/` exists. If not, create it with `mkdir -p`.
 2. Check if the file for the current month exists (e.g., `2026-03-timetracking.csv`). If not, create it with the header row.
-3. If the file exists, read the last entry to determine the next Task #, then append the new row.
-4. If updating an existing entry (same task continued after a summary), find the row by Task # and replace it.
+3. If the file exists, read the last entry to determine the next S #, then append the new row.
+4. If updating an existing entry (same task continued after a summary), find the row by S # and replace it.
 
 Use native Cascade file operations (Read/Write/Edit) first. If they fail, fall back to shell commands (`mkdir -p`, `echo >>`, `cat`). If shell commands also fail, display the entry in chat so the user can manually save it.
 
