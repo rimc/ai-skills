@@ -2,7 +2,8 @@
 
 name: time-tracking
 description: "ALWAYS use this skill when the user says 'thanks', 'perfect', 'that worked', 'looks good', 'all set', 'done', 'ship it', 'nice', 'awesome', 'great', 'that's it', 'we're done', 'it works', or any short positive acknowledgment that isn't immediately followed by a new request in the same message. Also ALWAYS use when the user says 'log my time', 'track this task', 'track time', '/track-time', or asks about time tracking history or hours saved. Use when the conversation topic shifts to a clearly different task. This skill tracks time spent on coding tasks and estimates hours saved using Windsurf."
-allowed-tools:  - Read
+allowed-tools:
+  - Read
   - Write
   - Edit
   - Bash(mkdir:*)
